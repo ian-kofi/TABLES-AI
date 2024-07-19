@@ -1,0 +1,32 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "89.117.9.1",
+            "port": 3306,
+            "driver": "MySQL",
+            "database": "u415950412_baked_gh",
+            "username": "u415950412_bakedgh",
+            "name": "test_baked",
+            "askForPassword": true
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "demo db",
+            "database": "demo_db",
+            "username": "root",
+            "askForPassword": true
+        }
+    ]
+}
