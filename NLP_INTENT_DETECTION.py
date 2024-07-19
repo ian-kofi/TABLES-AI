@@ -4,7 +4,7 @@ import streamlit as st
 import spacy.cli
 
 def load_spacy_model():
-    model_name = "en_core_web_lg"
+    model_name = "en_core_web_md"
     try:
         # Check if the model is available
         nlp = spacy.load(model_name)
