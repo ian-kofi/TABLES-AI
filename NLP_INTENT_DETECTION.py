@@ -1,8 +1,27 @@
 import spacy
 from sklearn import svm
+import streamlit as st
+import spacy.cli
 
+def load_spacy_model():
+    model_name = "en_core_web_lg"
+    try:
+        # Check if the model is available
+        nlp = spacy.load(model_name)
+        st.write("Model loaded successfully!")
+    except OSError:
+        # Download the model if not available
+        st.write("Model not found. Downloading...")
+        try:
+            spacy.cli.download(model_name)
+            nlp = spacy.load(model_name)
+            st.write("Model downloaded and loaded successfully!")
+        except Exception as e:
+            st.error(f"Failed to download spaCy model: {e}")
+            nlp = None
+    return nlp
 
-nlp = spacy.load("en_core_web_lg")
+nlp = load_spacy_model()
 
 class Search_Type:
     COST_PRICE = "COST_PRICE"
