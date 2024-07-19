@@ -4,7 +4,6 @@ plotly==5.22.0
 SQLAlchemy==2.0.31
 streamlit==1.30.0
 dateparser==1.2.0
-plotly.express==
 scikit-learn==1.5.0
 python-dateutil==2.9.0
 en-core-web-lg==3.7.1
