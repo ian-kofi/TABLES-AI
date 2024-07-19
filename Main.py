@@ -1,9 +1,9 @@
 import spacy
 import streamlit as st
 import spacy.cli
-
+""" 
 def load_spacy_model():
-    model_name = "en_core_web_md"
+    model_name = "en_core_web_sm"
     try:
         # Check if the model is available
         nlp = spacy.load(model_name)
@@ -21,7 +21,7 @@ def load_spacy_model():
     return nlp
 
 # Ensure the model is available
-nlp = load_spacy_model()
+nlp = load_spacy_model() """
 
 import re
 import NLP_INTENT_DETECTION

@@ -1,8 +1,8 @@
 import spacy
 from sklearn import svm
-import streamlit as st
-import spacy.cli
 
+import spacy.cli
+""" 
 def load_spacy_model():
     model_name = "en_core_web_md"
     try:
@@ -19,9 +19,9 @@ def load_spacy_model():
         except Exception as e:
             st.error(f"Failed to download spaCy model: {e}")
             nlp = None
-    return nlp
+    return nlp """
 
-report_nlp = load_spacy_model()
+report_nlp = spacy.load("en_core_web_md")
 
 class report_type:
     SALES_REPORT = "SALES_REPORT"
