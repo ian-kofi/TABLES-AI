@@ -1,6 +1,22 @@
 import spacy
 import streamlit as st
 import spacy.cli
+import re
+import NLP_INTENT_DETECTION
+import Get_Historical_Data
+import random
+import time
+from NER import load_model,model
+from streamlit_option_menu import option_menu
+from database_connection import database_connection
+import pandas as pd
+
+
+st.set_page_config(page_title="TABLES.AI", 
+                   page_icon="IMAGES/Asset 8.png", 
+                   layout="centered"
+                   )
+
 
 def load_spacy_model():
     model_name = "en_core_web_sm"  # Changed to a smaller model
@@ -20,26 +36,6 @@ def load_spacy_model():
 
 # Call the function to load the model
 nlp = load_spacy_model()
-
-
-import re
-import NLP_INTENT_DETECTION
-import Get_Historical_Data
-import random
-import time
-from NER import load_model,model
-from streamlit_option_menu import option_menu
-from database_connection import database_connection
-import pandas as pd
-
-
-
-
-st.set_page_config(page_title="TABLES.AI", 
-                   page_icon="IMAGES/Asset 8.png", 
-                   layout="centered"
-                   )
-
 
 load_model()
 
