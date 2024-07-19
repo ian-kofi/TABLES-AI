@@ -1,27 +1,22 @@
 import spacy
 import streamlit as st
 import spacy.cli
-""" 
-def load_spacy_model():
-    model_name = "en_core_web_sm"
-    try:
-        # Check if the model is available
-        nlp = spacy.load(model_name)
-        st.write("Model loaded successfully!")
-    except OSError:
-        # Download the model if not available
-        st.write("Model not found. Downloading...")
-        try:
-            spacy.cli.download(model_name)
-            nlp = spacy.load(model_name)
-            st.write("Model downloaded and loaded successfully!")
-        except Exception as e:
-            st.error(f"Failed to download spaCy model: {e}")
-            nlp = None
-    return nlp
 
-# Ensure the model is available
-nlp = load_spacy_model() """
+def load_spacy_model():
+        model_name = "en_core_web_md"  # You can use "en_core_web_md" or "en_core_web_lg" based on your need
+        try:
+            nlp = spacy.load(model_name)
+            st.write("Model loaded successfully!")
+        except OSError:
+            st.write("Model not found. Downloading...")
+            try:
+                spacy.cli.download(model_name)
+                nlp = spacy.load(model_name)
+                st.write("Model downloaded and loaded successfully!")
+            except Exception as e:
+                st.error(f"Failed to download spaCy model: {e}")
+                nlp = None
+        return nlp
 
 import re
 import NLP_INTENT_DETECTION
