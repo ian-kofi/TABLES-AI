@@ -1,14 +1,22 @@
+import spacy
+import streamlit as st
 import os
+def load_spacy_model():
+    model_name = "en_core_web_lg"
+    if not spacy.util.is_model(model_name):
+        try:
+            spacy.cli.download(model_name)
+        except Exception as e:
+            st.error(f"Failed to download spaCy model: {e}")
 
-# Download spaCy language model
-os.system("python -m spacy download en_core_web_lg")
+# Ensure the model is available
+load_spacy_model()
 
 import re
 import NLP_INTENT_DETECTION
 import Get_Historical_Data
 import random
 import time
-import streamlit as st
 from NER import load_model,model
 from streamlit_option_menu import option_menu
 from database_connection import database_connection
