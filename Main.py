@@ -1,3 +1,8 @@
+import os
+
+# Download spaCy language model
+os.system("python -m spacy download en_core_web_lg")
+
 import re
 import NLP_INTENT_DETECTION
 import Get_Historical_Data
