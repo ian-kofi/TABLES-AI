@@ -1,6 +1,6 @@
 import spacy
 from sklearn import svm
-
+import streamlit as st
 import spacy.cli
 
 def load_spacy_model():
@@ -21,7 +21,7 @@ def load_spacy_model():
             nlp = None
     return nlp 
 
-report_nlp = load_spacy_model
+report_nlp = load_spacy_model()
 
 class report_type:
     SALES_REPORT = "SALES_REPORT"
